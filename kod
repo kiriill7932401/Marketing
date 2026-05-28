@@ -17,7 +17,7 @@
   }
   body {
     font-family: 'Inter', sans-serif;
-    background-color: #010101;
+    background-color: #231e58a1;
     color: #eef2ff;
     line-height: 1.5;
   }
@@ -36,7 +36,7 @@
   /* Заголовок и оффер */
   .header {
     padding: 30px 20px;
-    background: linear-gradient(135deg, #66bb6a, #43a047);
+    background: linear-gradient(135deg, #0d37f1, #7256ee);
     text-align: center;
     color: #fff;
   }
@@ -54,7 +54,7 @@
     align-items: center;
     justify-content: center;
     gap: 12px;
-    background: #28a745;
+    background: #0d37f3;
     color: #fff;
     padding: 14px 36px;
     border-radius: 60px;
@@ -64,7 +64,7 @@
     transition: 0.3s;
   }
   .btn:hover {
-    background: #218838;
+    background: #0d37f1;
     transform: scale(1.03);
   }
   /* Общие стили секций */
@@ -76,7 +76,7 @@
     position: relative;
   }
   h2 span {
-    border-bottom: 3px solid #66bb6a;
+    border-bottom: 3px solid #0d37f1;
     padding-bottom: 8px;
     display: inline-block;
   }
@@ -88,7 +88,7 @@
     justify-content: center;
   }
   .card {
-    background: #0b0e17;
+    background: #7282af;
     border-radius: 20px;
     padding: 30px 20px;
     flex: 1 1 280px;
@@ -97,12 +97,12 @@
   }
   .card:hover {
     transform: translateY(-10px);
-    border-color: #66bb6a;
-    box-shadow: 0 20px 40px rgba(102, 187, 106, 0.4);
+    border-color: #6272a5;
+    box-shadow: 0 20px 40px rgba(85, 74, 245, 0.4);
   }
   .card i {
     font-size: 2.5rem;
-    color: #66bb6a;
+    color: #0c072e;
     margin-bottom: 20px;
   }
   /* Отзывы и результаты */
@@ -114,7 +114,7 @@
     margin: 0 auto;
   }
   .review {
-    background: #0b0e17;
+    background: #6272a5;
     padding: 20px;
     border-radius: 15px;
     border: 1px solid #2a2e3f;
@@ -136,8 +136,8 @@
     transition: border-color 0.3s, box-shadow 0.3s;
   }
   .tariff:hover {
-    border-color: #66bb6a;
-    box-shadow: 0 20px 40px rgba(102, 187, 106, 0.4);
+    border-color: #0d37f1;
+    box-shadow: 0 20px 40px rgba(85, 74, 245, 0.4);
   }
   /* FAQ */
   .faq {
@@ -148,7 +148,7 @@
     margin-bottom: 20px;
   }
   .faq-question {
-    background: #1f2538;
+    background: #526194;
     padding: 15px;
     border-radius: 10px;
     cursor: pointer;
@@ -163,7 +163,7 @@
   }
   /* Призыв к действию */
   .cta {
-    background: linear-gradient(135deg, #66bb6a, #43a047);
+    background: linear-gradient(135deg, #0d37f1, #7256ee);
     padding: 40px 20px;
     text-align: center;
     color: #fff;
