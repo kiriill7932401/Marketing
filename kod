@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Здоровый образ жизни и спорт</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header, footer {
+            background-color: #f2f2f2;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        h1, h2 {
+            color: #2E7D32;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            margin-top: 20px;
+            background-color: #2E7D32;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        /* Добавьте дополнительные стили по необходимости */
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Здоровье и энергия каждый день!</h1>
+    <p>Начните свой путь к активной жизни с нашими программами.</p>
+</header>
+
+<!-- 2. Проекция или прое -->
+<section id="what-is-health">
+    <h2>Что такое здоровый образ жизни?</h2>
+    <p>Преимущества активного образа жизни и спорта.</p>
+</section>
+
+<section id="why-care">
+    <h2>Почему важно заботиться о здоровье?</h2>
+    <p>Проекция будущего — бодрость, долголетие, уверенность.</p>
+</section>
+
+<!-- 3. Кому подойдёт, описание болевых ситуаций -->
+<section id="target-audience">
+    <h2>Кому нужен наш курс?</h2>
+    <ul>
+        <li>Людям с малой активностью</li>
+        <li>Страдающим от усталости и стресса</li>
+        <li>Тем, кто хочет похудеть или набрать мышечную массу</li>
+        <li>Людям с проблемами со здоровьем (после консультации врача)</li>
+    </ul>
+</section>
+
+<!-- 4. Что вы получите -->
+<section id="what-you-get">
+    <h2>Что вы получите?</h2>
+    <ul>
+        <li>Индивидуальные программы тренировок</li>
+        <li>Правильное питание и рекомендации</li>
+        <li>Постоянная поддержка тренеров</li>
+        <li>Онлайн и оффлайн форматы</li>
+    </ul>
+</section>
+
+<!-- 5. Выгода для клиентов -->
+<section id="benefits">
+    <h2>Почему выбирают нас?</h2>
+    <ul>
+        <li>Гарантированный результат</li>
+        <li>Удобное расписание</li>
+        <li>Доступные цены</li>
+        <li>Поддержка на каждом этапе</li>
+    </ul>
+</section>
+
+<!-- 6. Сценарий использования -->
+<section id="how-it-works">
+    <h2>Как это работает?</h2>
+    <ol>
+        <li>Заполнение анкеты</li>
+        <li>Индивидуальный подбор программы</li>
+        <li>Старт тренировок и консультаций</li>
+        <li>Постоянный контроль и корректировки</li>
+    </ol>
+</section>
+
+<!-- 7. Результаты или отзывы -->
+<section id="testimonials">
+    <h2>Что говорят наши клиенты?</h2>
+    <blockquote>"Я сбросила 10 кг за месяц!"</blockquote>
+    <blockquote>"Больше энергии, меньше стресса."</blockquote>
+    <!-- Добавьте реальные отзывы -->
+</section>
+
+<!-- 8. Цены и тарифы -->
+<section id="pricing">
+    <h2>Тарифы и акции</h2>
+    <ul>
+        <li>Стартовый — 3000 руб./мес</li>
+        <li>Премиум — 5000 руб./мес</li>
+        <li>Семейные пакеты и скидки при оплате сразу на 3 месяца</li>
+    </ul>
+    <a href="#order" class="btn">Оформить заявку</a>
+</section>
+
+<!-- 9. Призыв к действию -->
+<section id="cta">
+    <h2>Готовы изменить свою жизнь?</h2>
+    <a href="#order" class="btn">Запишитесь на пробное занятие</a>
+</section>
+
+<!-- 10. Кейсы -->
+<section id="cases">
+    <h2>Наши успехи</h2>
+    <p>Истории преображения, фото "до и после".</p>
+    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+        <div style="text-align: center;">
+            <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 10px;">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <img src="https://img.freepik.com/premium-psd/man-blue-polo-shirt-looks-directly-camera-with-slight-frown_1256629-10675.jpg?semt=ais_hybrid" alt="До" style="width: 300px; height: auto;">
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <img src="https://t3.ftcdn.net/jpg/00/51/64/02/360_F_51640297_O7ymQAM95h71MSH4531V4QtN8csj4GEI.jpg" alt="После" style="width: 300px; height: auto;">
+                </div>
+            </div>
+            <p>Просто стоит начать</p>
+        </div>
+    </div>
+</section>
+
+<!-- 11. Подробнее или кнопка перехода -->
+<section id="more-info">
+    <h2>Хочешь подробнее?</h2>
+    <a href="#program-details" class="btn">Перейти к разделу "Подробности программы"</a>
+</section>
+
+<!-- 12. Сертификаты и лицензии -->
+<section id="certificates">
+    <h2>Наши сертификаты и лицензии</h2>
+    <p>Гарантия качества и безопасности.</p>
+</section>
+
+<!-- 13. Партнеры -->
+<section id="partners">
+    <h2>Партнеры и сотрудничество</h2>
+    <p>Фитнес-клубы, медицинские центры, корпоративные клиенты.</p>
+</section>
+
+<!-- 14. FAQ -->
+<section id="faq">
+    <h2>Ответы на популярные вопросы</h2>
+    <ul>
+        <li>
+            <strong>Как записаться?</strong>
+            <p>Чтобы записаться, вы можете оставить заявку на нашем сайте, позвонить по телефону или отправить сообщение в мессенджер. Наш менеджер свяжется с вами для подтверждения времени и деталей.</p>
+        </li>
+        <li>
+            <strong>Какие нужны вещи для тренировки?</strong>
+            <p>Рекомендуется иметь удобную спортивную одежду, обувь и бутылку с водой. Для некоторых видов тренировок могут понадобиться специальные аксессуары — мы сообщим об этом заранее.</p>
+        </li>
+        <li>
+            <strong>Можно ли заниматься онлайн?</strong>
+            <p>Да, у нас есть возможность занятий онлайн. Вы можете выбрать удобное время и заниматься у себя дома под руководством наших тренеров в режиме видео-конференции.</p>
+        </li>
+        <li>
+            <strong>Как быстро виден результат?</strong>
+            <p>Время достижения результатов зависит от индивидуальных особенностей и регулярности тренировок, а также от питания. Обычно первые заметные изменения появляются уже через 3-4 недели систематических занятий.</p>
+        </li>
+    </ul>
+</section>
+
+<!-- 15. Контакты -->
+<footer id="contacts">
+    <h2>Контакты</h2>
+    <p>Адрес: г. Сургут, ул. Пушкина, д. 7</p>
+    <p>Телефон: +7 (777) 777-77-77</p>
+    <p>Соцсети: @fitnessclub</p>
+    <p>Часы работы: пн-вс 8:00-00:00</p>
+    <p>&copy; 2026 Все права защищены</p>
+</footer>
+
+</body>
+</html>
