@@ -1,198 +1,442 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Здоровый образ жизни и спорт</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-        header, footer {
-            background-color: #f2f2f2;
-            padding: 20px;
-            text-align: center;
-        }
-        section {
-            padding: 40px 20px;
-            max-width: 1200px;
-            margin: auto;
-        }
-        h1, h2 {
-            color: #2E7D32;
-        }
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            margin-top: 20px;
-            background-color: #2E7D32;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        /* Добавьте дополнительные стили по необходимости */
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ЗОЖ & Спорт — Твой путь к здоровью</title>
+
+<!-- Шрифты и иконки -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:300,400,600,700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #010101;
+    color: #eef2ff;
+    line-height: 1.5;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  /* Общие стили */
+  .section {
+    padding: 80px 20px;
+  }
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  /* Заголовок и оффер */
+  .header {
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #66bb6a, #43a047);
+    text-align: center;
+    color: #fff;
+  }
+  .header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+  }
+  .header p {
+    font-size: 1.2rem;
+  }
+  /* Кнопка */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: #28a745;
+    color: #fff;
+    padding: 14px 36px;
+    border-radius: 60px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin-top: 20px;
+    transition: 0.3s;
+  }
+  .btn:hover {
+    background: #218838;
+    transform: scale(1.03);
+  }
+  /* Общие стили секций */
+  h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+  }
+  h2 span {
+    border-bottom: 3px solid #66bb6a;
+    padding-bottom: 8px;
+    display: inline-block;
+  }
+  /* Карточки */
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  .card {
+    background: #0b0e17;
+    border-radius: 20px;
+    padding: 30px 20px;
+    flex: 1 1 280px;
+    max-width: 330px;
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+  }
+  .card:hover {
+    transform: translateY(-10px);
+    border-color: #66bb6a;
+    box-shadow: 0 20px 40px rgba(102, 187, 106, 0.4);
+  }
+  .card i {
+    font-size: 2.5rem;
+    color: #66bb6a;
+    margin-bottom: 20px;
+  }
+  /* Отзывы и результаты */
+  .reviews {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .review {
+    background: #0b0e17;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #2a2e3f;
+  }
+  /* Тарифы */
+  .tariffs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  .tariff {
+    background: #0b0e17;
+    border-radius: 20px;
+    padding: 30px 20px;
+    flex: 1 1 250px;
+    max-width: 300px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  .tariff:hover {
+    border-color: #66bb6a;
+    box-shadow: 0 20px 40px rgba(102, 187, 106, 0.4);
+  }
+  /* FAQ */
+  .faq {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .faq-item {
+    margin-bottom: 20px;
+  }
+  .faq-question {
+    background: #1f2538;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  .faq-answer {
+    display: none;
+    padding: 15px;
+    background: #2a2e3f;
+    border-radius: 10px;
+    margin-top: 8px;
+  }
+  /* Призыв к действию */
+  .cta {
+    background: linear-gradient(135deg, #66bb6a, #43a047);
+    padding: 40px 20px;
+    text-align: center;
+    color: #fff;
+  }
+  .cta h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  /* Шапка и подвал */
+  header, footer {
+    padding: 20px;
+    background: #010101;
+    text-align: center;
+  }
+  footer p {
+    font-size: 0.9rem;
+    color: #7f8aa8;
+  }
+
+  /* Адаптив */
+  @media(max-width: 768px){
+    h1 { font-size: 2rem; }
+    .cards { flex-direction: column; align-items: center; }
+  }
+</style>
 </head>
 <body>
 
+<!-- Шапка -->
 <header>
-    <h1>Здоровье и энергия каждый день!</h1>
-    <p>Начните свой путь к активной жизни с нашими программами.</p>
+  <h1 style="font-family: 'Montserrat', sans-serif; font-size: 2.5rem;">ЗОЖ & Спорт — Твой путь к здоровью</h1>
 </header>
 
+<!-- 1. Титульный экран с оффером -->
+<section class="header">
+  <h1>Преобрази свою жизнь с нашим интенсивом!</h1>
+  <p>Только 3 дня — максимум мотивации, знания и практики для твоего здоровья и энергии</p>
+  <a href="#register" class="btn"><i class="fas fa-dumbbell"></i> Начать прямо сейчас</a>
+</section>
+
 <!-- 2. Проекция или прое -->
-<section id="what-is-health">
-    <h2>Что такое здоровый образ жизни?</h2>
-    <p>Преимущества активного образа жизни и спорта.</p>
+<section class="section" style="background:#1f2538;">
+  <div class="container">
+    <h2><span>Проекция</span> будущего</h2>
+    <div class="cards">
+      <div class="card">
+        <i class="fas fa-chart-line"></i>
+        <h3>Ваш прогресс</h3>
+        <p>Представьте себя через 3 месяца: энергичный, стройный, уверенный в себе.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-heartbeat"></i>
+        <h3>Здоровье</h3>
+        <p>Отказ от вредных привычек, сильный иммунитет, хорошее самочувствие.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="why-care">
-    <h2>Почему важно заботиться о здоровье?</h2>
-    <p>Проекция будущего — бодрость, долголетие, уверенность.</p>
+<!-- 3. Кому подойдет, описание болевых ситуаций -->
+<section class="section">
+  <div class="container">
+    <h2><span>Кому это нужно?</span></h2>
+    <div class="cards">
+      <div class="card">
+        <i class="fas fa-user-injured"></i>
+        <h3>Те, кто устал</h3>
+        <p>Чувствуешь упадок сил, постоянную усталость и стресс?</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-bullhorn"></i>
+        <h3>Те, кто хочет изменений</h3>
+        <p>Готов начать новую жизнь, избавиться от вредных привычек, стать лучше.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- 3. Кому подойдёт, описание болевых ситуаций -->
-<section id="target-audience">
-    <h2>Кому нужен наш курс?</h2>
-    <ul>
-        <li>Людям с малой активностью</li>
-        <li>Страдающим от усталости и стресса</li>
-        <li>Тем, кто хочет похудеть или набрать мышечную массу</li>
-        <li>Людям с проблемами со здоровьем (после консультации врача)</li>
-    </ul>
-</section>
-
-<!-- 4. Что вы получите -->
-<section id="what-you-get">
-    <h2>Что вы получите?</h2>
-    <ul>
-        <li>Индивидуальные программы тренировок</li>
-        <li>Правильное питание и рекомендации</li>
-        <li>Постоянная поддержка тренеров</li>
-        <li>Онлайн и оффлайн форматы</li>
-    </ul>
+<!-- 4-2. Технологии и инструменты -->
+<section class="section" style="background:#1f2538;">
+  <div class="container">
+    <h2><span>Что внутри?</span></h2>
+    <div class="cards">
+      <div class="card">
+        <i class="fas fa-apple-alt"></i>
+        <h3>Питание</h3>
+        <p>План питания, рецепты, советы по продуктам.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-dumbbell"></i>
+        <h3>Тренировки</h3>
+        <p>Комплексы упражнений для дома и зала.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- 5. Выгода для клиентов -->
-<section id="benefits">
-    <h2>Почему выбирают нас?</h2>
-    <ul>
-        <li>Гарантированный результат</li>
-        <li>Удобное расписание</li>
-        <li>Доступные цены</li>
-        <li>Поддержка на каждом этапе</li>
-    </ul>
-</section>
-
-<!-- 6. Сценарий использования -->
-<section id="how-it-works">
-    <h2>Как это работает?</h2>
-    <ol>
-        <li>Заполнение анкеты</li>
-        <li>Индивидуальный подбор программы</li>
-        <li>Старт тренировок и консультаций</li>
-        <li>Постоянный контроль и корректировки</li>
-    </ol>
-</section>
-
-<!-- 7. Результаты или отзывы -->
-<section id="testimonials">
-    <h2>Что говорят наши клиенты?</h2>
-    <blockquote>"Я сбросила 10 кг за месяц!"</blockquote>
-    <blockquote>"Больше энергии, меньше стресса."</blockquote>
-    <!-- Добавьте реальные отзывы -->
-</section>
-
-<!-- 8. Цены и тарифы -->
-<section id="pricing">
-    <h2>Тарифы и акции</h2>
-    <ul>
-        <li>Стартовый — 3000 руб./мес</li>
-        <li>Премиум — 5000 руб./мес</li>
-        <li>Семейные пакеты и скидки при оплате сразу на 3 месяца</li>
-    </ul>
-    <a href="#order" class="btn">Оформить заявку</a>
-</section>
-
-<!-- 9. Призыв к действию -->
-<section id="cta">
-    <h2>Готовы изменить свою жизнь?</h2>
-    <a href="#order" class="btn">Запишитесь на пробное занятие</a>
-</section>
-
-<!-- 10. Кейсы -->
-<section id="cases">
-    <h2>Наши успехи</h2>
-    <p>Истории преображения, фото "до и после".</p>
-    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-        <div style="text-align: center;">
-            <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 10px;">
-                <div style="display: flex; flex-direction: column; align-items: center;">
-                    <img src="https://img.freepik.com/premium-psd/man-blue-polo-shirt-looks-directly-camera-with-slight-frown_1256629-10675.jpg?semt=ais_hybrid" alt="До" style="width: 300px; height: auto;">
-                </div>
-                <div style="display: flex; flex-direction: column; align-items: center;">
-                    <img src="https://t3.ftcdn.net/jpg/00/51/64/02/360_F_51640297_O7ymQAM95h71MSH4531V4QtN8csj4GEI.jpg" alt="После" style="width: 300px; height: auto;">
-                </div>
-            </div>
-            <p>Просто стоит начать</p>
-        </div>
+<section class="section">
+  <div class="container">
+    <h2><span>Почему выбирают нас?</span></h2>
+    <div class="cards">
+      <div class="card">
+        <i class="fas fa-user-shield"></i>
+        <h3>Индивидуальный подход</h3>
+        <p>Подберем программу под ваши цели и возможности.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-clock"></i>
+        <h3>Максимальный результат</h3>
+        <p>Все проверенные методики и быстрые лайфхаки.</p>
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- 11. Подробнее или кнопка перехода -->
-<section id="more-info">
-    <h2>Хочешь подробнее?</h2>
-    <a href="#program-details" class="btn">Перейти к разделу "Подробности программы"</a>
+<!-- 6. Этапы работы -->
+<section class="section" style="background:#1f2538;">
+  <div class="container">
+    <h2><span>Как работает?</span></h2>
+    <ol style="max-width:900px; margin:auto; padding-left:20px; font-size:1.1rem;">
+      <li>Заполните анкету — мы подбираем программу</li>
+      <li>Первые результаты — уже через неделю</li>
+      <li>Поддержка и мотивация на протяжении курса</li>
+      <li>Готовые привычки и долгосрочный эффект</li>
+    </ol>
+  </div>
 </section>
 
-<!-- 12. Сертификаты и лицензии -->
-<section id="certificates">
-    <h2>Наши сертификаты и лицензии</h2>
-    <p>Гарантия качества и безопасности.</p>
+<!-- 7. Результаты и отзывы -->
+<section class="section">
+  <div class="container">
+    <h2><span>Что говорят участники</span></h2>
+    <div class="reviews">
+      <div class="review">
+        <p>"После курса я почувствовал прилив энергии и стал лучше спать. Результат — за месяц минус 5 кг и новые привычки!"</p>
+        <p style="text-align:right; font-weight:600;">— Алексей, 32 года</p>
+      </div>
+      <div class="review">
+        <p>"Реально помогло избавиться от стресса и наладить питание. Теперь я чувствую себя бодрым и уверенным."</p>
+        <p style="text-align:right; font-weight:600;">— Марина, 28 лет</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. Тарифы и оформление -->
+<section class="section" style="background:#1f2538;">
+  <div class="container">
+    <h2><span>Тарифы</span></h2>
+    <div class="tariffs">
+      <div class="tariff">
+        <h3>Базовый</h3>
+        <p>Самостоятельное обучение, чек-листы, материалы — 1990 ₽</p>
+        <a href="#register" class="btn"><i class="fas fa-credit-card"></i> Оформить</a>
+      </div>
+      <div class="tariff">
+        <h3>Премиум</h3>
+        <p>Персональный коучинг, групповые звонки, поддержку — 4990 ₽</p>
+        <a href="#register" class="btn"><i class="fas fa-credit-card"></i> Оформить</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. Плашка с призывом -->
+<section class="cta">
+  <h2>Готов изменить свою жизнь?</h2>
+  <p>Запишись сейчас и начни путь к здоровью и энергии!</p>
+  <a href="#register" class="btn" style="background:#ff6f00; margin-top:20px;"><i class="fas fa-running"></i> Вступить в программу</a>
+</section>
+
+<!-- 10. Кейсы (если есть) -->
+<section class="section" style="background:#1f2538;">
+  <div class="container">
+    <h2><span>Кейсы успешных участников</span></h2>
+    <div class="cards">
+      <div class="card">
+        <i class="fas fa-user"></i>
+        <h3>Ирина, 45 лет</h3>
+        <p>За 2 месяца — минус 8 кг, улучшение сна и общего самочувствия.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-user"></i>
+        <h3>Дмитрий, 38 лет</h3>
+        <p>Стал заниматься регулярно и почувствовал прилив энергии на работе и в семье.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11. Кнопка для перехода, если отдельная страница -->
+<!-- Можно вставить кнопку или оставить как есть, тут пример -->
+<section class="section" style="text-align:center;">
+  <a href="#register" class="btn" style="background:#ff6f00;"><i class="fas fa-hand-pointer"></i> Записаться сейчас</a>
+</section>
+
+<!-- 12. Сертификаты и лицензии (если есть) -->
+<section class="section" style="background:#1f2538;">
+  <div class="container" style="text-align:center;">
+    <h2><span>Наши сертификаты</span></h2>
+    <p>Все программы подтверждены лицензиями и сертификатами качества.</p>
+  </div>
 </section>
 
 <!-- 13. Партнеры -->
-<section id="partners">
-    <h2>Партнеры и сотрудничество</h2>
-    <p>Фитнес-клубы, медицинские центры, корпоративные клиенты.</p>
+<section class="section">
+  <div class="container" style="text-align:center;">
+    <h2><span>Партнеры и сотрудничество</span></h2>
+    <p>Работаем с ведущими фитнес-клубами и диетологами.</p>
+  </div>
 </section>
 
 <!-- 14. FAQ -->
-<section id="faq">
-    <h2>Ответы на популярные вопросы</h2>
-    <ul>
-        <li>
-            <strong>Как записаться?</strong>
-            <p>Чтобы записаться, вы можете оставить заявку на нашем сайте, позвонить по телефону или отправить сообщение в мессенджер. Наш менеджер свяжется с вами для подтверждения времени и деталей.</p>
-        </li>
-        <li>
-            <strong>Какие нужны вещи для тренировки?</strong>
-            <p>Рекомендуется иметь удобную спортивную одежду, обувь и бутылку с водой. Для некоторых видов тренировок могут понадобиться специальные аксессуары — мы сообщим об этом заранее.</p>
-        </li>
-        <li>
-            <strong>Можно ли заниматься онлайн?</strong>
-            <p>Да, у нас есть возможность занятий онлайн. Вы можете выбрать удобное время и заниматься у себя дома под руководством наших тренеров в режиме видео-конференции.</p>
-        </li>
-        <li>
-            <strong>Как быстро виден результат?</strong>
-            <p>Время достижения результатов зависит от индивидуальных особенностей и регулярности тренировок, а также от питания. Обычно первые заметные изменения появляются уже через 3-4 недели систематических занятий.</p>
-        </li>
-    </ul>
+<section class="section" style="background:#1f2538;">
+  <div class="container faq">
+    <h2><span>Ответы на вопросы</span></h2>
+    <div class="faq-item">
+      <div class="faq-question" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='block'?'none':'block'">
+        Какие результаты я могу ожидать?
+      </div>
+      <div class="faq-answer" style="display:none;">
+        Обычно участники теряют 3-8 кг за курс, улучшают сон и настроение.
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='block'?'none':'block'">
+        Нужно ли заниматься с тренером?
+      </div>
+      <div class="faq-answer" style="display:none;">
+        Можно заниматься самостоятельно или с нашим коучем по индивидуальному плану.
+      </div>
+    </div>
+    <!-- Добавленные вопросы -->
+    <div class="faq-item">
+      <div class="faq-question" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='block'?'none':'block'">
+        Сколько времени нужно для достижения результатов?
+      </div>
+      <div class="faq-answer" style="display:none;">
+        Обычно первые заметные изменения заметны через 2-3 недели регулярных занятий.
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='block'?'none':'block'">
+        Есть ли возможность заниматься онлайн?
+      </div>
+      <div class="faq-answer" style="display:none;">
+        Да, все программы доступны в онлайн-формате, занятия проходят через видеосвязь.
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='block'?'none':'block'">
+        Какие материалы я получу после регистрации?
+      </div>
+      <div class="faq-answer" style="display:none;">
+        Вы получите доступ к видеокурсам, чек-листам, планам питания и тренировкам.
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- 15. Контакты -->
-<footer id="contacts">
-    <h2>Контакты</h2>
-    <p>Адрес: г. Сургут, ул. Пушкина, д. 7</p>
-    <p>Телефон: +7 (777) 777-77-77</p>
-    <p>Соцсети: @fitnessclub</p>
-    <p>Часы работы: пн-вс 8:00-00:00</p>
-    <p>&copy; 2026 Все права защищены</p>
+<!-- 15. Контакт и оффлайн-часть (если есть) -->
+<header style="background:#000; padding:20px; margin-top:40px;">
+  <p>Обучение проходит онлайн. Для личных встреч — по договоренности.</p>
+</header>
+<footer>
+  <p>© 2026 ЗОЖ & Спорт — Все права защищены</p>
+  <p>Телефон для связи: <a href="tel:+79997777777" style="color:#66bb6a; font-weight:700;">+7 (999) 777-77-77</a></p>
 </footer>
 
+<script>
+
+</script>
 </body>
 </html>
